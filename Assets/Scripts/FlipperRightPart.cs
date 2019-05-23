@@ -10,14 +10,14 @@ public class FlipperRightPart : MonoBehaviour
     {
 
     }
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "Ball")
+        if (col.gameObject.name == "RightTrigger")
         {
             StartPart(col);
         }
     }
-    void StartPart(Collision col)
+    void StartPart(Collider col)
     {
         myPart.Play();
     }
